@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>水果详情</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css?2">
+</head>
+<body>
+	<div class="menu-wrap">
+		<div class="menu">
+			<ul>
+				<li id="buyfruit" class="left active">
+					<a href="index.html">
+						<i></i>
+						<span>首页</span>
+					</a>
+				</li>
+				<li id="prebuy" class="left">
+					<a href="buyfruit.html">
+						<i></i>
+						<span>选购</span>
+					</a>
+				</li>
+				<li id="myorder" class="left">
+					<a href="myorder.html">
+						<i></i>
+						<span>订单</span>
+					</a>
+				</li>
+				<li id="shopbasket" class="left">
+					<a href="basket.html">
+						<i class="basket-number">
+							<span class="type-total">2</span>
+						</i>
+						<span>购物篮</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"><!-- hotfix-点击a背景边框高亮偏移bug --></div>
+	</div>
+
+	<div class="comment detail">
+		<span class="line"></span>
+		<div class="comment-item">
+			<ul class="clearfix">
+				<li class="name-wrap clearfix">
+					<p class="fruit-name right">
+						<span class="icon-edit"></span>
+						早春红玉
+					</p>
+				</li>
+				<li class="sale-by">
+					<span>按个销售</span>
+				</li>
+
+				<li class="detail-price-wrap">
+					<span>&yen;</span><span class="price">5.2</span>
+					<span class="last">/ 斤</span>
+				</li>
+			</ul>
+			<p>
+				"早春红玉”长江流域等地均有生产。
+			</p>
+			<p>
+				
+				 "早春红玉西瓜子"有清肺润肺功效。对因长时间坐在电脑前而双腿麻木肿胀的白领女性而言，早春红
+			</p>
+			<div class="slider">
+				<div id='fruit-detail-slider' class='swipe' style='height:150px'>
+					<ul>
+						<li style='display:block'>
+							<div>
+								<a href="#">
+									<img src="img/type-pic.png" alt="">
+								</a>
+							</div>
+						</li>
+						<li style='display:none'>
+							<div>2</div>
+						</li>
+						<li style='display:none'>
+							<div>3</div>
+						</li>
+						<li style='display:none'>
+							<div>4</div>
+						</li>
+					</ul>
+				</div>
+				<ul id="position">
+		   		   	<li class="on"></li>
+		     		<li class=""></li>
+		     		<li class=""></li>
+		     		<li class=""></li>
+		    	</ul>
+			</div>
+			<div class="new-cmt">
+				<span>最新评价</span>
+			</div>
+			<div class="detail-content">
+				<ul>
+					<li>
+						<span class="left username">猫*香</span>
+						<span class="right">
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+						</span>
+						<p>
+					   		西瓜很好吃啊，皮很脆，瓜很甜，给好评，给好评
+						</p>
+					</li>
+					<li>
+						<span class="left username">猫*香</span>
+						<span class="right">
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+						</span>
+						<p>
+					   		西瓜很好吃啊，皮很脆，瓜很甜，给好评，给好评
+						</p>
+					</li>
+					<li>
+						<span class="left username">猫*香</span>
+						<span class="right">
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+							<i class="icon-orange-star"></i>
+						</span>
+						<p>
+					   		西瓜很好吃啊，皮很脆，瓜很甜，给好评，给好评
+						</p>
+					</li>
+
+				</ul>
+			</div>
+			<p class="comment-loading">加载中...</p>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/swipe.min.js"></script>
+	<script>
+	$(function(){
+		var bullets = $('.slider #position li');
+		var slider = new Swipe(document.getElementById('fruit-detail-slider'), {
+		    auto: 10000,
+		    continuous: true,
+		    callback: function(index,pos) {
+
+		      bullets.siblings().removeClass('on');
+
+		      bullets.eq(slider.getPos()).addClass('on');
+
+		    }
+		  });
+	})
+	</script>
+</body>
+</html>

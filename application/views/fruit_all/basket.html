@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>购物篮</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css?2">
+</head>
+<body>
+	<div class="menu-wrap">
+		<div class="menu">
+			<ul>
+				<li id="buyfruit" class="left">
+					<a href="index.html">
+						<i></i>
+						<span>首页</span>
+					</a>
+				</li>
+				<li id="prebuy" class="left">
+					<a href="buyfruit.html">
+						<i></i>
+						<span>选购</span>
+					</a>
+				</li>
+				<li id="myorder" class="left">
+					<a href="myorder.html">
+						<i></i>
+						<span>订单</span>
+					</a>
+				</li>
+				<li id="shopbasket" class="left active">
+					<a href="basket.html">
+						<i class="basket-number">
+							<span class="type-total">2</span>
+						</i>
+						<span>购物篮</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"><!-- hotfix-点击a背景边框高亮偏移bug --></div>
+	</div>
+	<div class="basket-submit-wrap">
+			<div class="basket-submit">
+				<div>
+					<!-- <div class="select-all left">
+						<label class="checkbox">
+						</label>
+						全选
+					</div> -->
+					合计：&yen; <span id="total-price" class="total">14.0</span>
+					<button >
+						<span>结算 (<span class="type-total">2</span>)</span>
+					</button>
+				</div>		
+			</div>
+			<div class="clearfix"><!-- hotfix-点击a背景边框高亮偏移bug --></div>
+		</div>
+
+	<div class="basket-none" style="display:none;">
+		<div class="basket-bg"></div>
+		<p>购物车为空哦，快去选购吧!</p>
+	</div>
+	<div class="basket">
+		<span class="line"></span>
+		<div class="basket-item">
+			<ul class="clearfix">
+				<li>
+					<!-- <label class="checkbox checked" for="checkbox1">
+					</label>
+					<input type="checkbox" checked="checked" value="" id="checkbox1"> -->
+					<div class="pic-wrap">
+						<img src="img/type-pic.png" alt="">
+					</div>
+				</li>
+				<li class="name-wrap clearfix">
+					<p class="fruit-name right">早春红玉 <br>
+					<span>&yen; </span><span class="price">8.8</span>
+					<span class="last">/ 斤</span>
+					</p>
+				</li>
+				<li class="sale-by">
+					<span>按个销售</span>
+				</li>
+				<li class="tool">
+					<a href="#" class="sub"></a>
+					<input class="number" name="number" value="1" readonly="readonly" />
+					<a href="#" class="add"></a>
+				</li>
+			</ul>
+			<p>
+				共<span class="amount">1</span>份水果,合计：&yen; <span class="total-price">8.8</span>
+			</p>
+		</div>
+
+		<div class="basket-item">
+			<ul class="clearfix">
+				<li>
+					<!-- <label class="checkbox checked" for="checkbox1">
+					</label>
+					<input type="checkbox" checked="checked" value="" id="checkbox1"> -->
+					<div class="pic-wrap">
+						<img src="img/type-pic.png" alt="">
+						<span>预购</span>
+					</div>
+				</li>
+				<li class="name-wrap clearfix">
+					<p class="fruit-name right">早春红玉 <br>
+					<span>&yen; </span><span class="price">5.2</span>
+					<span class="last">/ 斤</span>
+					</p>
+				</li>
+				<li class="sale-by">
+					<span>按个销售</span>
+				</li>
+				<li class="tool">
+					<a href="#" class="sub"></a>
+					<input class="number" name="number" value="1" readonly="readonly" />
+					<a href="#" class="add"></a>
+				</li>
+			</ul>
+			<p>
+				<span class="left">七月8号发货</span>
+				共<span class="amount">1</span>份水果,合计：&yen; <span class="total-price">5.2</span>
+			</p>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src = "js/script.js?1"></script>
+</body>
+</html>

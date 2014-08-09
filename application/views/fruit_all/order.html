@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>订单确认</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css?1">
+</head>
+<body>
+	<form action="" id="" method="post">
+		<div class="order-submit-wrap">
+			<div class="order-submit">
+				<div>
+					合计：&yen;<span class="total">12.6</span>
+					<button >
+						<span>提交订单</span>
+					</button>
+				</div>		
+			</div>
+			<div class="clearfix"><!-- hotfix-点击a背景边框高亮偏移bug --></div>
+		</div>
+
+		<div class="comment order-confirm">
+			<span class="line"></span>
+			<div class="comment-item">
+				<div class="money-wrap">
+					<a href="#">
+						<div class="add-addr on">
+							<div class="">
+								<span class="left"></span>
+								<p class="left">添加地址</p>
+							</div>
+						</div>
+					</a>
+					<div class="my-addr">
+						<ul>
+							<li class="">
+								<p>临江花园33101 - 张三</p>
+								<p class="tel">12345678901</p>
+								<a href="#">&times;</a>
+							</li>
+							<li class="on">
+								<p>临江花园33101临江花园33101临江花园33101 - 张三</p>
+								<p class="tel">12345678901</p>
+								<a href="#">&times;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="comment-item add-addr-info-wrap">
+				<div class="star-wrap order-icon-wrap">
+					<span class="icon-addr"></span>
+					<span>配送地址</span>
+				</div>
+				<div class="add-addr-info">
+					<form action="" method="post">
+						<ul class="clearfix">
+							<li>
+								<label class="left placeholder icon-refresh"></label>
+								<label class="left">
+								地址
+								</label>
+								<input type="text" name="addr" placeholder="请输入送货地址"><br>
+							</li>
+							<li>
+								<label class="left placeholder"></label>
+								<label class="left">
+								收货人
+								</label>
+								<input type="text" name="username" placeholder="请输入收货人姓名"><br>
+							</li>
+							<li>
+								<label class="left placeholder"></label>
+								<label class="left">
+								联系方式
+								</label>
+								<input type="text" name="tel" placeholder="请输入联系电话"><br>
+							</li>
+						</ul>
+						<div class="addr-tool">
+							<input type="submit" value="添加">
+							<input type="reset" value="取消">
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="comment-item">
+				<div class="star-wrap order-icon-wrap">
+					<span class="icon-time"></span>
+					<span>配送时间</span>
+				</div>
+				<div class="pay-wrap time-wrap">
+					<ul class="clearfix">
+						<li>
+							<label class="checkbox" for="radiobox-now">
+							</label>
+							<label for="radiobox-now">
+							立即送 (30分钟左右)
+							</label>
+							<input type="radio" checked="checked" name="send-mode" checked="checked" value="0" id="radiobox-now">
+						</li>
+						<li class="send-in-time">
+							<label class="checkbox checked" for="radiobox-time">
+							</label>
+							<label for="radiobox-time">
+							定时送
+							</label>
+							<input type="radio" name="send-mode" value="1" id="radiobox-time">
+							<select name="send-time" id="time-choose">
+								<option value="1">早上 7:00-8:00</option>
+								<option value="2">中午 11:30-12:30</option>
+								<option value="3">晚上 17:00-19:00</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="comment-item">
+				<div class="star-wrap order-icon-wrap">
+					<span class="icon-pay"></span>
+					<span>支付方式</span>
+				</div>
+				<div class="pay-wrap">
+					<ul class="clearfix">
+						<li>
+							<label class="checkbox checked" for="radiobox1">
+							</label>
+							<label for="radiobox1">
+							现金支付
+							</label>
+							<input type="radio" name="pay-mode" checked="checked" value="1" id="radiobox1">
+						</li>
+						<li>
+							<label class="checkbox" for="radiobox2">
+							</label>
+							<label for="radiobox2">
+							余额支付
+							</label>
+							<input type="radio" name="pay-mode" value="2" id="radiobox2">
+						</li>
+						<li>
+							<label class="checkbox" for="radiobox3">
+							</label>
+							<label for="radiobox3">
+							支付宝支付
+							</label>
+							<input type="radio" name="pay-mode" value="3" id="radiobox3">
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="comment-item">
+				<div class="star-wrap order-icon-wrap">
+					<span class="icon-pay"></span>
+					<span>订单备注</span>
+				</div>
+				<div class="note-wrap">
+					<textarea name="" id="" cols="30" rows="10" placeholder="备注"></textarea>
+				</div>
+			</div>
+		</div>
+	</form>
+	<script src="js/jquery.min.js"></script>
+	<script src = "js/script.js?1"></script>
+</body>
+</html>

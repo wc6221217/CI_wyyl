@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>我的订单</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css?2">
+</head>
+<body>
+	<div class="menu-wrap">
+		<div class="menu">
+			<ul>
+				<li id="buyfruit" class="left">
+					<a href="index.html">
+						<i></i>
+						<span>首页</span>
+					</a>
+				</li>
+				<li id="prebuy" class="left">
+					<a href="buyfruit.html">
+						<i></i>
+						<span>选购</span>
+					</a>
+				</li>
+				<li id="myorder" class="left active">
+					<a href="myorder.html">
+						<i></i>
+						<span>订单</span>
+					</a>
+				</li>
+				<li id="shopbasket" class="left">
+					<a href="basket.html">
+						<i class="basket-number">
+							<span class="type-total">2</span>
+						</i>
+						<span>购物篮</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"><!-- hotfix-点击a背景边框高亮偏移bug --></div>
+	</div>
+	<div class="index-bar">
+		<div class="index-bar-btn left2"></div>
+		我的订单
+		<div class="index-bar-btn right2"></div>
+	</div>
+	<div class="myorder-userinf">
+		<div class="myorder-userinf-pic"></div>
+		<div class="myorder-userinf-text">
+			<div class="myorder-userinf-text-nametext">用户名称</div>
+			<div class="myorder-userinf-text-name">水果达人</div><br/>
+			<div class="myorder-userinf-text-userpoints">积分 : 0</div>
+		</div>
+		<div class="myorder-userinf-btn">修改</div>
+	</div>
+	<div class="myorder-moneyinf">
+		<div class="myorder-moneyinf-money">账户余额 : ￥ 0.00</div>
+		<a href="" class="myorder-moneyinf-btn">账户充值</a>
+	</div>
+	<div class="myorder-line"></div>
+	<div class="myorder-order">
+		<div class="myorder-order-header">
+			<div class="myorder-order-header-icon">i</div>
+			<div class="myorder-order-header-text">订单详情</div>
+			<a class="myorder-order-header-history">历史清单>></a>
+		</div>
+		<div class="myorder-order-ordernumber">订单编号 : 001</div>
+		<div class="myorder-order-inf">
+			<div class="myorder-order-inf-text">水果详情:</div>
+			<div class="myorder-order-inf-item">
+				<div class="myorder-order-inf-item-fruitname">1.早春红玉</div>
+				<div class="myorder-order-inf-item-weightandmoney">
+					<div class="myorder-order-inf-item-weightandmoney-text up">下单重量：1.0斤  下单金额：¥ 5.2</div><br/>
+					<div class="myorder-order-inf-item-weightandmoney-text down">实际重量：1.1斤  实际金额：¥ 5.8</div>
+				</div>
+			</div>
+			<div class="myorder-order-inf-item">
+				<div class="myorder-order-inf-item-fruitname">1.早春红玉</div>
+				<div class="myorder-order-inf-item-weightandmoney">
+					<div class="myorder-order-inf-item-weightandmoney-text up">下单重量：1.0斤  下单金额：¥ 5.2</div><br/>
+					<div class="myorder-order-inf-item-weightandmoney-text down">实际重量：1.1斤  实际金额：¥ 5.8</div>
+				</div>
+			</div>
+		</div>
+		<div class="myorder-order-statistics">共计2样水果，合计: ¥11.6</div>
+		<div class="myorder-order-distributioninf">
+			<div class="myorder-order-distributioninf-text left">下单时间:</div>
+			<div class="myorder-order-distributioninf-text right">2014-07-07 15:44</div>
+			<div class="myorder-order-distributioninf-text left">配送时间:</div>
+			<div class="myorder-order-distributioninf-text right">2014-07-07 17:00</div>
+			<div class="myorder-order-distributioninf-text left">收货地址:</div>
+			<div class="myorder-order-distributioninf-text right">XX小区XX幢XX单元XX室<br/>张先生 收</div>
+			<div class="myorder-order-distributioninf-text left">联系电话:</div>
+			<div class="myorder-order-distributioninf-text right">18878245678</div>
+			<div class="myorder-order-distributioninf-text left">订单备注:</div>
+			<div class="myorder-order-distributioninf-text right">快点哦~!</div>
+		</div>
+		<div class="myorder-order-distributioninf-btn">取消订单</div>
+		<div class="myorder-order-distributionschedule schedule2"></div>
+		<div class="myorder-order-distributionscheduletext">
+			<div class="myorder-order-distributionscheduletext-text left">已下单</div>
+			<div class="myorder-order-distributionscheduletext-text mid">已处理</div>
+			<div class="myorder-order-distributionscheduletext-text mid">已配送</div>
+			<div class="myorder-order-distributionscheduletext-text right">已签收</div>
+		</div>
+	</div>
+	<div class="selectfruit-blank"></div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
