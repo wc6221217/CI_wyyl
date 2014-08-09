@@ -61,6 +61,7 @@
 		while(isset($fruits[$i])){
 	?>
 	<div class="buyfruit-item">
+		<!--水果大类信息-->
 		<div class="setmeal-item">
 			<img class="buyfruit-item-pic" src="<?=base_url().'/pic/fruit1.png'?>"/>
 			<div class="setmeal-item-pic-new">新</div>
@@ -71,22 +72,24 @@
 				<div class="buyfruit-item-text">186  评价     16  粉丝</div>
 			</div>
 		</div>
+		<!--隐藏栏-->
 		<div class="buyfruit-item-downnoshow" id="<?='no-show'.$i?>">
 			<div class="buyfruit-item-changebar" >
 				<div class="buyfruit-item-changebar-icon up"></div>
 			</div>
 		</div>
+		<!--显示栏-->
 		<div class="buyfruit-item-downshow" id="<?='show'.$i?>">
 			<div class="buyfruit-item-changebar" >
 				<div class="buyfruit-item-changebar-icon down"></div>
 			</div>
-			
+			<!--水果品种栏-->
 			<div class="buyfruit-item-downshow-item">
 			<?php
 				$j = 0;
 				while(isset($fruits[$i][$j])){
 			?>
-				<div class="buyfruit-item-downshow-item-small" id="<?='show1-item'.$j?>">
+				<div class="buyfruit-item-downshow-item-small" id="<?='show'.$i.'-item'.$j?>">
 					<div class="buyfruit-item-downshow-item-small-text"><?=$fruits[$i][$j]['type_name']?></div>
 					<div class="buyfruit-item-downshow-item-small-down">
 						<div class="buyfruit-item-downshow-item-small-icon"></div>
@@ -102,7 +105,8 @@
 				$j = 0;
 				while(isset($fruits[$i][$j])){
 			?>
-			<div class="buyfruit-item-downshow-item2" id="<?="show1-item".$j."-content"?>">
+			<!--水果品种购买版块-->
+			<div class="buyfruit-item-downshow-item2" id="<?='show'.$i.'-item'.$j.'-content'?>">
 				<img class="buyfruit-item-downshow-item2-pic" src="http://localhost/CI_wyyl/pic/fruit1.png"/>
 				
 				<div class="buyfruit-item-downshow-item2-righttext">

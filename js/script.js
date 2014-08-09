@@ -354,10 +354,12 @@ $(document).ready(function(){
 	
 	
     /* ======购买水果====== */
+	/*
 	var showid = "show1-item0";
 	$("#"+showid).addClass("checked");
 	var id ="show1-item0-content";
 	$("#"+id).addClass("show");
+	//展开或者隐藏大类下面的版块
     $(".buyfruit-item-changebar").click(function(){ 
         var id = this.parentNode.getAttribute('id');
         if(id[0]=='n'){
@@ -370,12 +372,50 @@ $(document).ready(function(){
             var noshowid = "no-" + id;
             $("#"+noshowid).css("display","block");
         }
+
     });
+	//在水果品种版块之间切换
     $(".buyfruit-item-downshow-item-small").click(function(){
         $(".buyfruit-item-downshow-item-small").removeClass("checked");
         $(this).addClass("checked");
         var id = this.getAttribute('id');
         $(".buyfruit-item-downshow-item2").removeClass("show");
+        var showid = id + "-content";
+        $("#"+showid).addClass("show");
+    });  
+	*/
+	
+	/* ======购买水果重构====== */
+	var showid = "show1-item0";
+	$("#"+showid).addClass("checked");
+	var id ="show0-item0-content";
+	$("#"+id).addClass("show");
+	$('.buyfruit-item-downshow-item').next().addClass("show");
+	$('.buyfruit-item-downshow-item :first').addClass("checked");
+	$('.buyfruit-item-downshow .buyfruit-item-downshow-item2 :first').addClass("checked");
+
+	//展开或者隐藏大类下面的版块
+    $(".buyfruit-item-changebar").click(function(){ 
+        var id = this.parentNode.getAttribute('id');
+		var change_bar = $(this).parent();
+		var change_bar_id = change_bar.attr('id');
+        if(change_bar_id[0]=='n'){
+			change_bar.css("display","none");
+			var change_bar_show = $(change_bar).next();
+			change_bar_show.css("display","block");
+        }else{
+            change_bar.css("display","none");
+            var change_bar_none = $(change_bar).prev();
+            change_bar_none.css("display","block");
+        }
+		
+    });
+	//在水果品种版块之间切换
+    $(".buyfruit-item-downshow-item-small").click(function(){
+        $(this).parent().find(".buyfruit-item-downshow-item-small").removeClass("checked");
+        $(this).addClass("checked");
+        var id = this.getAttribute('id');
+        $(this).parent().parent().find(".buyfruit-item-downshow-item2").removeClass("show");
         var showid = id + "-content";
         $("#"+showid).addClass("show");
     });  
