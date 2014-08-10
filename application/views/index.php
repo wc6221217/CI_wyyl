@@ -18,11 +18,6 @@
 </head>
 
 <body>
-	<?php
-
-	
-		
-	?>
 	<div class="menu-wrap">
 		<div class="menu">
 			<ul>
@@ -93,43 +88,53 @@
 			</div>
 		</div>
 	</div>
-	<div class="index-slectionbox">
-		<a href="<?=base_url().'first/linkto_special_performance'?>" class="index-slectionbox-item">
-			<div class="index-slectionbox-item-icon session"></div>
-			<div class="index-slectionbox-item-text">专场</div>
-		</a>
-		<a href="<?=base_url().'first/linkto_package'?>" class="index-slectionbox-item">
-			<div class="index-slectionbox-item-icon setmeal"></div>
-			<div class="index-slectionbox-item-text">套餐</div>
-		</a>
-		<a href="<?=base_url().'first/linkto_prebuy'?>" class="index-slectionbox-item">
-			<div class="index-slectionbox-item-icon prebuy"></div>
-			<div class="index-slectionbox-item-text">预购</div>
-		</a>
-		<a href="<?=base_url().'first/linkto_discount'?>" class="index-slectionbox-item">
-			<div class="index-slectionbox-item-icon privilege"></div>
-			<div class="index-slectionbox-item-text">优惠</div>
-		</a>
-	</div>
-	<div class="index-selectfruit">
-		<div class="index-selectfruit-text">定制你喜欢的水果</div>
-	
-		<div class="selectfruit-selectavoritefruit">
-			<?php 
-			if(isset($_SESSION['is_logined']) && $_SESSION['is_logined']=='1'){
-			foreach ($private_custom as $key => $value){ ?>
-			
-			<div class="selectfruit-selectavoritefruit-item">
-			<img class="selectfruit-selectavoritefruit-item-icon" src="<?=$value['fruits_class_picture']?>" alt="猕猴桃">
-			<div class="selectfruit-selectavoritefruit-item-text" id="item1-text"><?=$value['fruits_class_name']?></div>
-			</div>
-			<?php }
-
-			}?>
+	<div class="clearfix">
+		<div class="index-slectionbox">
+			<a href="<?=base_url().'first/linkto_special_performance'?>" class="index-slectionbox-item">
+				<div class="index-slectionbox-item-icon session"></div>
+				<div class="index-slectionbox-item-text">专场</div>
+			</a>
+			<a href="<?=base_url().'first/linkto_package'?>" class="index-slectionbox-item">
+				<div class="index-slectionbox-item-icon setmeal"></div>
+				<div class="index-slectionbox-item-text">套餐</div>
+			</a>
+			<a href="<?=base_url().'first/linkto_prebuy'?>" class="index-slectionbox-item">
+				<div class="index-slectionbox-item-icon prebuy"></div>
+				<div class="index-slectionbox-item-text">预购</div>
+			</a>
+			<a href="<?=base_url().'first/linkto_discount'?>" class="index-slectionbox-item">
+				<div class="index-slectionbox-item-icon privilege"></div>
+				<div class="index-slectionbox-item-text">优惠</div>
+			</a>
 		</div>
+	</div>
+	<div class="clearfix">
+		<div class="index-selectfruit">
+			<div class="index-selectfruit-text">定制你喜欢的水果</div>
 		
-		<div class="index-selectfruit-btn-out">
-			<a href="<?=base_url().'first/linkto_private_custom'?>"><div class="index-selectfruit-btn"></div></a>
+			<div class="clearfix">
+				<div class="selectfruit-selectavoritefruit">
+					<?php 
+					if(isset($_SESSION['is_logined']) && $_SESSION['is_logined']=='1'){
+					foreach ($private_custom as $key => $value){ ?>
+					
+					<div class="selectfruit-selectavoritefruit-item">
+					<img class="selectfruit-selectavoritefruit-item-icon" src="<?=$value['fruits_class_picture']?>" alt="<?=$value['fruits_class_name']?>">
+					<div class="selectfruit-selectavoritefruit-item-text" id="item1-text"><?=$value['fruits_class_name']?></div>
+					</div>
+					<?php }
+						
+					}?>
+				</div>
+			</div>
+			
+			<div class="clearfix">
+				<div class="index-selectfruit-btn-out">
+					<a href="<?=base_url().'first/linkto_private_custom'?>">
+						<span class="index-selectfruit-btn"></span>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<script src="<?=base_url().'js/jquery.min.js'?>"></script>

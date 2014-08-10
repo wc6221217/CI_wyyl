@@ -10,7 +10,8 @@
 <html lang="en">
 <head>
 	<title>选择水果</title>
-	<meta name="viewport"content="target-densitydpi =device-dpi, width=device-width " />
+	<!-- <meta name="viewport"content="target-densitydpi =device-dpi, width=device-width " /> -->
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,user-scalable=no" />
 	<link rel="stylesheet" href="<?=base_url().'css/reset.css'?>">
@@ -73,7 +74,7 @@
 		?>
 	<?php endforeach ?>
 		<div class="selectfruit-selectavoritefruit-item" id="<?="item".$value['fruits_class_id']?>">
-			<img class="selectfruit-selectavoritefruit-item-icon<?=$checked?>" src="<?=$value['fruits_class_picture']?>" id="item<?=$value['fruits_class_id']?>-pic" alt="猕猴桃">
+			<img class="selectfruit-selectavoritefruit-item-icon<?=$checked?>" src="<?=$value['fruits_class_picture']?>" id="item<?=$value['fruits_class_id']?>-pic" alt="<?=$value['fruits_class_name']?>">
 			<div class="selectfruit-selectavoritefruit-item-text<?=$checked?>" id="item<?=$value['fruits_class_id']?>-text"><?=$value['fruits_class_name']?></div>
 		</div>
 	<?php endforeach ?>
