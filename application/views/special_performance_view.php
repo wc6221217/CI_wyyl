@@ -57,12 +57,14 @@
 		<div class="index-bar-btn right2"></div>
 	</div>
 	<div class="session-bar">
+		
 		<div class="session-bar-item" id="sessioncont1-item">
-			<div class="session-bar-item-icon pregnantwoman checked" id="sessioncont1-item-pic"></div>
+			<div class="session-bar-item-icon loseweight checked" id="sessioncont1-item-pic"></div>
 			<div class="session-bar-item-text checked" id="session-item1-text"><?=$special_performance['0']['special_performance_name']?></div>
 		</div>
+		
 		<div class="session-bar-item" id="sessioncont2-item">
-			<div class="session-bar-item-icon loseweight" id="sessioncont2-item-pic"></div>
+			<div class="session-bar-item-icon pregnantwoman" id="sessioncont2-item-pic"></div>
 			<div class="session-bar-item-text" id="sessioncont2-item-text"><?=$special_performance['1']['special_performance_name']?></div>
 		</div>
 		<div class="session-bar-item" id="sessioncont3-item">
@@ -79,7 +81,7 @@
 	?>
 	<div class="session-bar-line">
 	</div>
-	<div class="session-item show" id="sessioncont1">
+	<div class="session-item show" id="sessioncont<?=$i+1?>">
 		<!--水果大类信息-->
 		<div class="setmeal-item">
 			<img class="buyfruit-item-pic" src="<?=base_url().'/pic/fruit1.png'?>"/>
