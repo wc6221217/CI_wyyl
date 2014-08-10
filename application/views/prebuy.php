@@ -61,10 +61,11 @@
 	<div></div>
 	
 	<?php
+		//print_r($book_order_show);
 		$i = 0;
 		while(isset($book_order_show[$i])){
 	?>
-	<form action="<?=base_url().'first/linkto_order_check'?>" method="post">
+	<form name="<?='prebuy'.$book_order_show[$i]['book_order_show_id']?>" action="<?=base_url().'first/linkto_order_check'?>" method="post">
 		<input type="hidden" name="user_id" value="
 			<?php
 				if($_SESSION['is_logined']=='1')

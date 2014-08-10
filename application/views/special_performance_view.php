@@ -80,6 +80,7 @@
 	<div class="session-bar-line">
 	</div>
 	<div class="session-item show" id="sessioncont1">
+		<!--水果大类信息-->
 		<div class="setmeal-item">
 			<img class="buyfruit-item-pic" src="<?=base_url().'/pic/fruit1.png'?>"/>
 			<div class="setmeal-item-pic-new">新</div>
@@ -92,12 +93,12 @@
 				<div class="buyfruit-item-text">186  评价     16  粉丝</div>
 			</div>
 		</div>
-		<div class="buyfruit-item-downnoshow" id="no-show1_sessioncont1">
+		<div class="buyfruit-item-downnoshow" id="no-show<?=$j?>">
 			<div class="buyfruit-item-changebar" >
 				<div class="buyfruit-item-changebar-icon up"></div>
 			</div>
 		</div>
-		<div class="buyfruit-item-downshow" id="show1_sessioncont1">
+		<div class="buyfruit-item-downshow" id="show<?=$j?>">
 			<div class="buyfruit-item-changebar" >
 				<div class="buyfruit-item-changebar-icon down"></div>
 			</div>
@@ -107,7 +108,7 @@
 					while(isset($special_performance[$i][$j][$k])){
 					
 				?>
-				<div class="buyfruit-item-downshow-item-small checked" id="show1-item1_sessioncont1">
+				<div class="buyfruit-item-downshow-item-small" id="<?='show'.$j.'-item'.$k?>">
 					<div class="buyfruit-item-downshow-item-small-text"><?=$special_performance[$i][$j][$k]['type_name']?></div>
 					<div class="buyfruit-item-downshow-item-small-down">
 						<div class="buyfruit-item-downshow-item-small-icon"></div>
@@ -123,7 +124,7 @@
 				$k = 0;
 				while(isset($special_performance[$i][$j][$k])){
 			?>
-			<div class="buyfruit-item-downshow-item2 show" id="show1-item1_sessioncont1-content">
+			<div class="buyfruit-item-downshow-item2" id="<?='show'.$j.'-item'.$k.'-content'?>">
 				<img class="buyfruit-item-downshow-item2-pic" src="./pic/fruit1.png"/>
 				<div class="buyfruit-item-downshow-item2-righttext">
 					<div class="buyfruit-item-downshow-item2-name"><?=$special_performance[$i][$j][$k]['type_name']?></div>
@@ -133,7 +134,7 @@
 						<div class="buyfruit-item-downshow-item2-unit">/斤</div>
 					</div>
 				</div>
-				<div class="special-performance-item-downshow-item2-btn show" id="show1-item1_sessioncont1-btn">
+				<div class="special-performance-item-downshow-item2-btn" id="show1-item1_sessioncont1-btn">
 					<div style="display:none;" class="type_id"><?=$special_performance[$i][$j][$k]['type_id']?></div>
 					<div class="special-performance-item-downshow-item2-minus">-</div>
 					<div class="special-performance-item-downshow-item2-number" id="show1-item1_sessioncont1-btn-number">
