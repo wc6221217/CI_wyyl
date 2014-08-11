@@ -124,29 +124,29 @@
 				$k = 0;
 				while(isset($special_performance[$i][$j][$k])){
 			?>
-			<div class="buyfruit-item-downshow-item2" id="<?='show'.$j.'-item'.$k.'-content'?>">
+			<div class="fruit-type buyfruit-item-downshow-item2" id="<?='show'.$j.'-item'.$k.'-content'?>">
 				<img class="buyfruit-item-downshow-item2-pic" src="./pic/fruit1.png"/>
 				<div class="buyfruit-item-downshow-item2-righttext">
 					<div class="buyfruit-item-downshow-item2-name"><?=$special_performance[$i][$j][$k]['type_name']?></div>
 					<div class="buyfruit-item-downshow-item2-buyway">按个销售</div>
 					<div class="buyfruit-item-downshow-item2-moneyandunit">
-						<div class="buyfruit-item-downshow-item2-money">￥5.2</div>
+						<div class="buyfruit-item-downshow-item2-money">￥<span class="price">7.8</span></div>
 						<div class="buyfruit-item-downshow-item2-unit">/斤</div>
 					</div>
 				</div>
-				<div class="special-performance-item-downshow-item2-btn" id="show1-item1_sessioncont1-btn">
-					<div style="display:none;" class="type_id"><?=$special_performance[$i][$j][$k]['type_id']?></div>
-					<div class="special-performance-item-downshow-item2-minus">-</div>
-					<div class="special-performance-item-downshow-item2-number" id="show1-item1_sessioncont1-btn-number">
-						<?php
+				<div class="amount-wrap line-top">
+					<!-- <div style="display:none;" class="type_id"><?=$special_performance[$i][$j][$k]['type_id']?></div> -->
+					<a href="javascript:;" class="change-mount mount-sub"></a>
+					<?php
 						if(isset($_COOKIE[$special_performance[$i][$j][$k]['type_id']]) && $_COOKIE[$special_performance[$i][$j][$k]['type_id']])
-							echo $_COOKIE[$special_performance[$i][$j][$k]['type_id']];
-						else
-							echo 0;
-						?>
-					</div>
-					<div class="special-performance-item-downshow-item2-add">+</div>
-				</div>
+							$_value = $_COOKIE[$special_performance[$i][$j][$k]['type_id']];
+						else{
+							$_value = 0;
+						}
+					?>
+					<input type="text" name="{$value['name']}"  class="mount onsale" value="<?=$_value?>" id="<?=$special_performance[$i][$j][$k]['type_id']?>">
+					<a href="javascript:;" class="change-mount mount-add"></a>
+				</div> 
 			</div>
 			<?php
 					$k++;
@@ -164,7 +164,12 @@
 	?>
 	<div class="privilege-bottom-bar">
 		<div class="privilege-bottom-bar-text">
-			已选：1  总计：¥ 9.2
+			<div class="total-price-wrap">
+				<span style="font-weight:bold;">已选：1</span>
+				<span style="font-weight:bold;">总计: </span>
+				<span>¥</span>
+				<input readonly="readonly" class="total-price" value="0.0">
+			</div>
 		</div>
 		<div class="privilege-bottom-bar-btn">
 			选好了

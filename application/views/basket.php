@@ -108,7 +108,7 @@
 					if(isset($_COOKIE[$type_id]) && $_COOKIE[$type_id]>0){
 						$i++;
 			?>
-			<ul class="clearfix">
+			<ul class="clearfix fruit-type">
 				<li>
 					<!-- <label class="checkbox checked" for="checkbox1">
 					</label>
@@ -127,9 +127,11 @@
 					<span>按个销售</span>
 				</li>
 				<li class="tool">
-					<a href="#" class="sub"></a>
-					<input class="number" name="number" value="<?=$_COOKIE[$type_id]?>" readonly="readonly" id="<?=$type_id?>"/>
-					<a href="#" class="add"></a>
+					<div class="amount-wrap line-top">
+						<a href="javascript:;" class="change-mount mount-sub"></a>
+						<input type="text" name="{$value['name']}"  class="mount" value="<?=$_COOKIE[$type_id]?>" id="<?=$type_id?>">
+						<a href="javascript:;" class="change-mount mount-add"></a>
+					</div>
 				</li>
 			</ul>
 			<?php
@@ -176,7 +178,7 @@
 				}
 			?>
 			<p>
-				共<span class="amount"><?=$i?></span>份水果,合计：&yen; <span class="total-price" id="total-price"><?=$total_price?></span>
+				共<span class="amount"><?=$i?></span>份水果,合计：&yen; <input class="total-price" id="total-price" value="<?=$total_price?>"/>
 			</p>
 		</div>
 		
