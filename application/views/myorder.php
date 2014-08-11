@@ -105,7 +105,7 @@
 		</div>
 
 		<div class="myorder-order-statistics">合计: ¥<?=$all_order[$i]['order_money']?>
-			<div class="myorder-order-distributioninf-btn">取消订单</div>
+			<!--<div class="myorder-order-distributioninf-btn">取消订单</div>-->
 		</div>
 		
 		

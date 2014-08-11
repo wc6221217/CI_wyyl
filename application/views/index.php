@@ -65,6 +65,7 @@
 							<div>
 								<a href="#">
 									<img src="<?=base_url().'img/type-pic.png'?>" alt="">
+									<!--<img src="<?=$pic['0']?>">-->
 								</a>
 							</div>
 						</li>
@@ -119,8 +120,10 @@
 					foreach ($private_custom as $key => $value){ ?>
 					
 					<div class="selectfruit-selectavoritefruit-item">
-					<img class="selectfruit-selectavoritefruit-item-icon" src="<?=$value['fruits_class_picture']?>" alt="<?=$value['fruits_class_name']?>">
+					<a href="<?=base_url().'first/linkto_buyfruit/#'.$value['fruits_class_id']?>">
+					<img  class="selectfruit-selectavoritefruit-item-icon" src="<?=$value['fruits_class_picture']?>" alt="<?=$value['fruits_class_name']?>">
 					<div class="selectfruit-selectavoritefruit-item-text" id="item1-text"><?=$value['fruits_class_name']?></div>
+					</a>
 					</div>
 					<?php }
 						

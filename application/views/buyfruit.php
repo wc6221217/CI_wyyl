@@ -60,9 +60,9 @@
 		$i = 0;
 		while(isset($fruits[$i])){
 	?>
-	<div class="buyfruit-item">
+	
 		<!--水果大类信息-->
-		<div class="setmeal-item session-fruit-class">
+		<div class="setmeal-item session-fruit-class" name="<?=$fruits[$i]['fruits_class_id']?>" id="<?=$fruits[$i]['fruits_class_id']?>">
 			<img class="buyfruit-item-pic" src="<?=base_url().'/pic/fruit1.png'?>"/>
 			<div class="setmeal-item-pic-new">新</div>
 			<div class="setmeal-item-right">

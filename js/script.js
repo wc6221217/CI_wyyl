@@ -578,9 +578,9 @@ $(document).ready(function(){
 		var basket_number = getCookie('basket_number');
 		if(parseInt(number) == 0){
 			basket_number++;
-			setCookie('basket_number',basket_number);
-			var total_number = $('.type-total');
-			total_number.html(getCookie('basket_number'));
+			//setCookie('basket_number',basket_number);
+			//var total_number = $('.type-total');
+			//total_number.html(getCookie('basket_number'));
 		}
     });
 	//减少一个单位
@@ -603,9 +603,9 @@ $(document).ready(function(){
 					basket_number--;
 				else
 					basket_number = 0;
-				setCookie('basket_number',basket_number);
-				var total_number = $('.type-total');
-				total_number.html(getCookie('basket_number'));
+				//setCookie('basket_number',basket_number);
+				//var total_number = $('.type-total');
+				//total_number.html(getCookie('basket_number'));
 			}
         }
     });
