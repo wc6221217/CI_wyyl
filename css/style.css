@@ -2283,3 +2283,32 @@ margin-right:5px;
 .h_pholder{
 	height: 64px;
 }
+.change-mount{
+	-webkit-tap-highlight-color: rgba(0,0,0,0.1);
+font-size: 1.6em;
+display: inline-block;
+/*height: 20px;*/
+line-height: 1em;
+text-align: center;
+text-align: -webkit-match-parent;
+}
+.mount-sub,.mount-add {
+	height: 22px;
+width: 22px;
+display: inline-block;
+background: url('../img/jiajian-01.png');
+vertical-align: middle;
+}
+.mount-sub {
+
+background: url('../img/jiajian-02.png');
+}
+.mount{
+	border:1px solid #e7e7e7;
+	width: 35px;
+	margin: 0 5px 0 1px;
+	text-align: center;
+	line-height: 25px;
+	color: #000;
+	font-weight: bold;
+}

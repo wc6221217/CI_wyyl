@@ -1222,3 +1222,143 @@ for(var i = 0; i < binarray.length * 4; i += 3)
 }
 return str;
 }
+
+$(function(){
+
+/*水果数量加减*/
+	;(function(){
+
+		$('.mount-add').click(function(e){
+
+			var $mount = $(this).siblings('.mount');
+
+			var _price =  parseFloat($(this).parents('.fruit-type').find('.price').html());
+			// console.log(_price );
+
+			var ori_val = parseFloat($('.total-price').val());
+			// console.log(ori_val);
+
+			$mount.val(parseFloat($mount.val()*1.0+ 1).toFixed(1));
+
+			setCookie($mount.attr("id"),$mount.val());
+
+			$('.total-price').val((ori_val+_price).toFixed(1));
+		})
+
+		$('.mount-sub').click(function(e){
+
+			var $mount = $(this).siblings('.mount');
+
+			var _price =  parseFloat($(this).parents('.fruit-type').find('.price').html());
+
+			var ori_val = parseFloat($('.total-price').val());
+
+			var _size = 1;	/*小于1的情况下可能是半斤*/
+
+			if($mount.val()<=1){
+
+				if(confirm('您确定要删除此商品吗?')){
+
+					_size = $mount.val();
+
+					$mount.val(0);
+
+				}else{
+
+					return false;
+				}
+
+			}else{
+
+				$mount.val(parseFloat($mount.val()*1.0 - 1).toFixed(1));
+			}
+
+			if($(this).hasClass('basket-mount-sub')){
+
+				if($mount.val() == 0){
+
+					$(this).parents('ul').remove();
+				}
+			}
+
+				setCookie($mount.attr("id"),$mount.val());
+				
+				// var _total_price = parseFloat($order_total_price.html());
+				
+				// $total_price.html((_total_price*1.0 - _price*1.0).toFixed(1));
+				
+				if($mount.val()<=0){
+
+						var basket_number = getCookie('basket_number');
+
+						setCookie('basket_number',basket_number-1);
+
+						var total_number = $('.type-total');
+
+						total_number.html(getCookie('basket_number'));
+
+						location.reload();
+				}
+
+				var _price =  parseFloat($(this).parents('.fruit-type').find('.price').html());
+
+				var ori_val = parseFloat($('.total-price').val());
+
+				$('.total-price').val((ori_val-_price*_size).toFixed(1));
+
+			
+		})
+	}())
+
+	;(function(){
+
+		var _ori_amount = null;
+
+		$('.mount').focus(function(event) {
+			
+			_ori_amount = $(this).val();
+		});
+
+		$('.mount').blur(function(event) {
+
+			var id = $(this).attr('id');
+
+			if($(this).val().length > 0){
+
+					if(parseFloat($(this).val())+"" == "NaN"){
+
+						$(this).val(0);
+						
+					}else{
+
+						$(this).val(parseFloat($(this).val()));
+					}
+
+				}
+				if(parseFloat($(this).val())<0){
+
+					$(this).val(0);
+				}
+				if($(this).val().length==0){
+
+					$(this).val(0);
+				}
+
+				setCookie(id,$(this).val());
+
+				var diff = parseFloat($(this).val()) - parseFloat(_ori_amount);
+
+				var _price =  parseFloat($(this).parents('.fruit-type').find('.price').html());
+			// console.log(_price );
+
+			var ori_val = parseFloat($('.total-price').val());
+			// console.log(ori_val);
+
+			var new_val = ori_val + diff * _price;
+
+			$('.total-price').val((new_val).toFixed(1));
+
+		});
+
+	})();
+})
