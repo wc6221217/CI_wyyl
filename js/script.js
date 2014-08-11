@@ -350,40 +350,6 @@ $(function(){
 
 /*by xu*/
 $(document).ready(function(){
-	/* ======购物篮====== */
-	
-	
-    /* ======购买水果====== */
-	/*
-	var showid = "show1-item0";
-	$("#"+showid).addClass("checked");
-	var id ="show1-item0-content";
-	$("#"+id).addClass("show");
-	//展开或者隐藏大类下面的版块
-    $(".buyfruit-item-changebar").click(function(){ 
-        var id = this.parentNode.getAttribute('id');
-        if(id[0]=='n'){
-            $("#"+id).css("display","none");
-            var arr_showid = id.split('-');
-            var showid = arr_showid[1];
-            $("#"+showid).css("display","block");
-        }else{
-            $("#"+id).css("display","none");
-            var noshowid = "no-" + id;
-            $("#"+noshowid).css("display","block");
-        }
-
-    });
-	//在水果品种版块之间切换
-    $(".buyfruit-item-downshow-item-small").click(function(){
-        $(".buyfruit-item-downshow-item-small").removeClass("checked");
-        $(this).addClass("checked");
-        var id = this.getAttribute('id');
-        $(".buyfruit-item-downshow-item2").removeClass("show");
-        var showid = id + "-content";
-        $("#"+showid).addClass("show");
-    });  
-	*/
 	
 	/* ======购买水果重构====== */
 	var showid = "show1-item0";
@@ -422,13 +388,11 @@ $(document).ready(function(){
 	
 	//购买水果页面增加一个单位
     $(".buyfruit-item-downshow-item2-add").click(function(){ 
-        var parentid=this.parentNode.getAttribute('id');
-        var id = parentid + "-number";
-        var number = document.getElementById(id).innerHTML;
-        document.getElementById(id).innerHTML = number*1+1;
-		var amount = document.getElementById(id).innerHTML;
-		var test = parentid+"-type_id"; 
-		var type_id = document.getElementById(test).innerHTML;
+        var num = $(this).prev();
+        var number = num.html();
+        num.html(number*1.0+1);
+        var amount = num.html();
+		var type_id = $(this).next().html();
 		setCookie(type_id, amount);
 		
 		//var price = $(this).parent().prev().find('.buyfruit-item-downshow-item2-money');
@@ -448,19 +412,17 @@ $(document).ready(function(){
     });
 	//减少一个单位
     $(".buyfruit-item-downshow-item2-minus").click(function(){
-        var parentid=this.parentNode.getAttribute('id');
-        var id = parentid + "-number";
-        var number = document.getElementById(id).innerHTML;
+        var num = $(this).next();
+        var number = num.html();
         if(number==0)
         {
             alert("亲，买一件吧^@^");
         }
         else
         {
-			document.getElementById(id).innerHTML = number*1-1;
-			var amount = document.getElementById(id).innerHTML;
-			var test = parentid+"-type_id"; 
-			var type_id = document.getElementById(test).innerHTML;
+			num.html(number*1.0-1);
+			var amount = num.html();		
+			var type_id = $(this).next().next().next().html();
 			setCookie(type_id, amount);
 			//alert(getCookie(type_id));
 			var basket_number = getCookie('basket_number');
