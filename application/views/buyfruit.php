@@ -62,7 +62,7 @@
 	?>
 	<div class="buyfruit-item">
 		<!--水果大类信息-->
-		<div class="setmeal-item">
+		<div class="setmeal-item session-fruit-class">
 			<img class="buyfruit-item-pic" src="<?=base_url().'/pic/fruit1.png'?>"/>
 			<div class="setmeal-item-pic-new">新</div>
 			<div class="setmeal-item-right">
@@ -119,7 +119,7 @@
 					</div>
 					<div class="setmeal-item-right-inf"><a href="<?=base_url().'first/linkto_detail/'.$fruits[$i][$j]['type_id']?>">详情：本西瓜瓤红脆口></a></div>
 				</div>
-				<div class="buyfruit-item-downshow-item2-btn" id="<?='show1-item'.$j.'-btn'?>">
+				<div class="buyfruit-item-downshow-item2-btn" id="<?='show'.$i.'-item'.$j.'-btn'?>">
 					
 					<div class="buyfruit-item-downshow-item2-minus">-</div>
 					

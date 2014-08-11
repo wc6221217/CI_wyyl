@@ -2181,6 +2181,16 @@ margin-right:5px;
 {
 	color:#65901a;
 }
+.session-block{
+	width:100%;
+	height:auto;
+	float:left;
+	display:none;
+}
+.session-block.show
+{
+	display:block;
+}
 .session-item
 {
 	width:100%;

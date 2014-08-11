@@ -710,6 +710,8 @@ $(document).ready(function(){
         
     });
     /* ======专场====== */
+    $(this).find('.session-block').first().addClass("show");
+    $('.seesion-item:first').addClass("show");
     $(".session-bar-item").click(function(){
         $(".session-bar-item-icon").removeClass("checked");
         $(".session-bar-item-text").removeClass("checked");
@@ -718,9 +720,9 @@ $(document).ready(function(){
         var textid = id + "-text"; 
         $("#"+picid).toggleClass("checked");
         $("#"+textid).toggleClass("checked");
-        $(".session-item").css("display","none");
-        var arr_contid = id.split('-');
-        var contid = arr_contid[0];
+        $(".session-block").css("display","none");
+        //var arr_contid = id.split('-');
+        var contid = id + "-block";
         $("#"+contid).css("display","block");
     });
 });
